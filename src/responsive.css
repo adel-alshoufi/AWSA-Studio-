@@ -1,0 +1,622 @@
+/* ============================================================
+   RESPONSIVE CSS
+   Mobile:   < 640px
+   Tablet:   640px – 1023px
+   Laptop:   1024px – 1279px
+   Desktop:  ≥ 1280px
+   ============================================================ */
+
+/* ── Hamburger: hidden on desktop ── */
+#menu-open {
+    display: none;
+}
+
+/* ── Mobile nav overlay ── */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.mobile-nav.open {
+    display: flex;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav ul li a {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.mobile-nav-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* ============================================================
+   LAPTOP  1024px – 1279px
+   ============================================================ */
+@media (max-width: 1279px) and (min-width: 1024px) {
+
+    .letter {
+        font-size: clamp(10rem, 28vw, 22rem) !important;
+    }
+
+    .all-section {
+        padding: 20px 40px;
+    }
+
+    .counter-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+
+        .icon-counter {
+            grid-column-start: 1 !important;
+            grid-column-end: 2 !important;
+            grid-row-end: 1 !important;
+            grid-row-end: 2 !important;
+        }
+
+        .first-counter {
+            grid-column-start: 2 !important;
+            grid-column-end: 3 !important;
+            grid-row-end: 1 !important;
+            grid-row-end: 2 !important;
+        }
+
+        .second-counter {
+            grid-column-start: 2 !important;
+            grid-column-end: 3 !important;
+            grid-row-end: 2 !important;
+            grid-row-end: 3 !important;
+        }
+
+        .third-counter {
+            grid-column-start: 1 !important;
+            grid-column-end: 2 !important;
+            grid-row-end: 2 !important;
+            grid-row-end: 3 !important;
+        }
+
+        .last-link {
+            grid-column-start: 1 !important;
+            grid-column-end: 4 !important;
+            grid-row-end: 3 !important;
+            grid-row-end: 4 !important;
+        }
+    }
+
+    .cards .grid.grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: auto !important;
+    }
+
+    .grid.grid-cols-3.grid-rows-2.cr {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: auto !important;
+    }
+
+    .theTeam-1,
+    .theTeam-2,
+    .theTeam-3 {
+        width: 90% !important;
+    }
+
+    .page-1,
+    .page-2 {
+        width: calc(50% - 12px);
+    }
+
+    .footer-brand {
+        font-size: clamp(140px, 16vw, 240px);
+    }
+}
+
+/* ============================================================
+   TABLET  640px – 1023px
+   ============================================================ */
+@media (max-width: 1023px) {
+
+    /* ── Header ── */
+    #menu-open {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        z-index: 50;
+        padding: 0;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    /* ── Hero ── */
+    .letter {
+        font-size: clamp(6rem, 20vw, 14rem) !important;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    /* ── Intro section ── */
+    .all-section {
+        padding: 20px 24px;
+        margin-top: 60px;
+    }
+
+    .all-section .pl-20 {
+        padding-left: 0 !important;
+    }
+
+    .all-section .pr-20 {
+        padding-right: 0 !important;
+    }
+
+    .w-\[50\%\] {
+        width: 100% !important;
+    }
+
+    .w-\[90\%\] {
+        width: 100% !important;
+    }
+
+    .max-w-\[50\%\] {
+        max-width: 100% !important;
+    }
+
+    .max-w-\[90\%\] {
+        max-width: 100% !important;
+    }
+
+    /* ── Projects image grid: 1 col ── */
+    /* .grid.grid-cols-2.grid-rows-2.cr {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+    } */
+
+    /* ── Services: 2 cols ── */
+    .cards .grid.grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: auto !important;
+    }
+
+    /* ── Testimonials: disable scroll-freeze, stack cards ── */
+    .card-1,
+    .card-2,
+    .card-3 {
+        position: relative !important;
+        top: auto !important;
+        width: 100% !important;
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .flex.gap-5:has(.card-1) {
+        flex-direction: column !important;
+    }
+
+    /* ── Why Us grid: 2 cols ── */
+    .grid.grid-cols-3.grid-rows-2.cr {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+    }
+
+    .counter-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+
+        .icon-counter {
+            grid-column-start: 1 !important;
+            grid-column-end: 2 !important;
+            grid-row-end: 1 !important;
+            grid-row-end: 2 !important;
+        }
+
+        .first-counter {
+            grid-column-start: 2 !important;
+            grid-column-end: 3 !important;
+            grid-row-end: 1 !important;
+            grid-row-end: 2 !important;
+        }
+
+        .second-counter {
+            grid-column-start: 2 !important;
+            grid-column-end: 3 !important;
+            grid-row-end: 2 !important;
+            grid-row-end: 3 !important;
+        }
+
+        .third-counter {
+            grid-column-start: 1 !important;
+            grid-column-end: 2 !important;
+            grid-row-end: 2 !important;
+            grid-row-end: 3 !important;
+        }
+
+        .last-link {
+            grid-column-start: 1 !important;
+            grid-column-end: 4 !important;
+            grid-row-end: 3 !important;
+            grid-row-end: 4 !important;
+        }
+    }
+
+
+    .grid.grid-cols-3.grid-rows-2.cr .col-start-2.col-end-4.row-start-2 {
+        grid-column: 1 / -1 !important;
+        min-height: 200px;
+    }
+
+    /* ── Awards table ── */
+    .grid.grid-cols-3.gap-4.awards,
+    .grid.grid-cols-3.gap-4.text-sm {
+        grid-template-columns: 1fr 1fr auto !important;
+        font-size: 13px;
+    }
+
+    /* ── Team: single column ── */
+    .grid.grid-cols-2.grid-rows-3 {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+    }
+
+    .theTeam-1,
+    .theTeam-2,
+    .theTeam-3 {
+        width: 100% !important;
+        margin-left: 0 !important;
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+
+
+    .forTeam {
+        height: 650px;
+    }
+
+    /* ── Pricing: stack ── */
+    .page-1,
+    .page-2 {
+        width: 100% !important;
+    }
+
+    /* ── FAQ grid: single column ── */
+    .grid.grid-cols-2.gap-15.mt-30 {
+        grid-template-columns: 1fr !important;
+    }
+
+    .grid.grid-cols-2.gap-15.mt-30 .col-start-2 {
+        grid-column: 1 !important;
+        min-height: 280px;
+    }
+
+    /* ── Contact: stack form + image ── */
+    .flex:has(> .w-\[30\%\]) {
+        flex-direction: column !important;
+    }
+
+    .w-\[30\%\] {
+        width: 100% !important;
+    }
+
+    .parent-from {
+        padding: 5px !important;
+    }
+
+    from {
+        padding: 10px !important;
+        gap: 5px;
+    }
+
+    .w-\[70\%\] {
+        width: 100% !important;
+    }
+
+    .contact-image {
+        display: none;
+    }
+
+    /* ── Footer ── */
+    .footer-top {
+        flex-direction: column;
+        /* align-items: flex-center; */
+        gap: 20px;
+    }
+
+    .footer-brand {
+        font-size: clamp(80px, 18vw, 160px);
+    }
+
+    .footer-bottom {
+        /* flex-direction: column; */
+        gap: 8px;
+        font-size: 14px;
+    }
+
+    /* ── Spacing ── */
+    .mt-40\! {
+        margin-top: 60px !important;
+    }
+
+    .mt-60\! {
+        margin-top: 60px !important;
+    }
+}
+
+/* ============================================================
+   MOBILE  < 640px
+   ============================================================ */
+@media (max-width: 639px) {
+
+    /* ── Header ── */
+    .logo {
+        font-size: 1.5rem !important;
+    }
+
+    header .cr {
+        padding: 10px 16px;
+    }
+
+    /* ── Hero ── */
+    .letter {
+        font-size: clamp(4.5rem, 26vw, 8rem) !important;
+    }
+
+    .hero {
+        height: 55vh;
+        padding: 12px !important;
+    }
+
+    .footer-brand {
+        font-size: clamp(52px, 24vw, 90px);
+        -webkit-text-stroke: 2px #fff;
+    }
+
+    /* ── Intro ── */
+    .all-section {
+        padding: 16px;
+        margin-top: 40px;
+    }
+
+    .all-section h3 {
+        font-size: 1rem !important;
+    }
+
+    /* ── Section headings ── */
+    h2.text-6xl,
+    .text-6xl {
+        font-size: 2rem !important;
+    }
+
+    .text-5xl {
+        font-size: 1.75rem !important;
+    }
+
+    .text-4xl {
+        font-size: 1.4rem !important;
+    }
+
+    /* ── Width helpers ── */
+    .w-\[50\%\],
+    .w-\[85\%\],
+    .w-\[90\%\],
+    .max-w-\[50\%\],
+    .max-w-\[90\%\] {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* ── Projects: 1 col ── */
+    .grid.grid-cols-2.grid-rows-2.cr {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* ── Services: 1 col ── */
+    .cards .grid.grid-cols-3 {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* ── Testimonials: disable scroll-freeze, stack cards ── */
+    .card-1,
+    .card-2,
+    .card-3 {
+        position: relative !important;
+        top: auto !important;
+        width: 100% !important;
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        padding: 24px 16px !important;
+    }
+
+    .flex.gap-5:has(.card-1) {
+        flex-direction: column !important;
+    }
+
+    /* ── Why Us: 1 col ── */
+    .grid.grid-cols-3.grid-rows-2.cr {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: repeat(5, 1fr) !important;
+    }
+
+    .counter-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto !important;
+    }
+
+    .icon-counter {
+        grid-row-start: 1 !important;
+        grid-row-end: 2 !important;
+    }
+
+    .first-counter {
+        grid-row-start: 2 !important;
+        grid-row-end: 3 !important;
+    }
+
+    .second-counter {
+        grid-row-start: 3 !important;
+        grid-row-end: 4 !important;
+    }
+
+    .third-counter {
+        grid-row-start: 4 !important;
+        grid-row-end: 5 !important;
+    }
+
+    .last-link {
+        grid-row-start: 5 !important;
+        grid-row-end: 6 !important;
+    }
+
+    .grid.grid-cols-3.grid-rows-2.cr>* {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+
+    /* ── Awards: 1 col ── */
+    .grid.grid-cols-3.gap-4.awards,
+    .grid.grid-cols-3.gap-4.text-sm {
+        grid-template-columns: 1fr !important;
+        font-size: 12px;
+    }
+
+    /* ── Team ── */
+    .grid.grid-cols-2.grid-rows-3 {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+        gap: 15px;
+    }
+
+    .theTeam-1,
+    .theTeam-2,
+    .theTeam-3 {
+        width: 100% !important;
+        margin-left: 0 !important;
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        margin-bottom: 20px;
+    }
+
+    .forTeam {
+        height: 300px;
+    }
+
+    /* ── Pricing ── */
+    .page-1,
+    .page-2 {
+        width: 100% !important;
+        margin-bottom: 10px;
+        padding: 24px 16px !important;
+    }
+
+    /* ── FAQ ── */
+    .grid.grid-cols-2.gap-15.mt-30 {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+        margin-top: 16px !important;
+    }
+
+    .grid.grid-cols-2.gap-15.mt-30 .col-start-2 {
+        grid-column: 1 !important;
+        min-height: 220px;
+    }
+
+    .accordion-btn {
+        font-size: 14px;
+        padding: 14px 10px;
+        gap: 10px;
+    }
+
+    /* ── Contact ── */
+    .flex:has(> .w-\[30\%\]) {
+        flex-direction: column !important;
+    }
+
+    .w-\[30\%\] {
+        width: 100% !important;
+    }
+
+    .w-\[70\%\] {
+        width: 100% !important;
+    }
+
+    /* ── Footer ── */
+    .footer-top {
+        /* flex-direction: column; */
+        /* align-items: flex-start; */
+        gap: 16px;
+    }
+
+    .footer-top nav ul {
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 2px;
+        gap: 12px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        font-size: 12px;
+        padding: 16px 10px;
+    }
+
+    /* ── Spacing ── */
+    .mt-40\! {
+        margin-top: 40px !important;
+    }
+
+    .mt-60\! {
+        margin-top: 40px !important;
+    }
+
+    .gap-30 {
+        gap: 20px !important;
+    }
+
+    .gap-25 {
+        gap: 16px !important;
+    }
+
+    .gap-15 {
+        gap: 10px !important;
+    }
+
+    .gap-40 {
+        gap: 24px !important;
+    }
+}
