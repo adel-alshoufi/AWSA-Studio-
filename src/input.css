@@ -68,7 +68,10 @@
     --text-xlarge: 80px;
     /* 80px */
 }
-
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 .cr {
     max-width: 1400px;
     padding: 15px;

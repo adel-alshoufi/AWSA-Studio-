@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="stylesheet" href="./responsive.css">
+    <link rel="stylesheet" href="./src/responsive.css">
     <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
     <title>AWSA Studio - Webflow HTML website</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -17,7 +17,7 @@
 
 <body class="bg-black text-white 100vh">
     <div class="relative bg-fixed bg-center bg-cover"
-        style="background-image: url(./for-images/69696db7e6e52df7c5c8bbbb_sufyan-crKFSTKufs8-unsplash.jpg);">
+        style="background-image: url(./src/for-images/69696db7e6e52df7c5c8bbbb_sufyan-crKFSTKufs8-unsplash.jpg);">
         <!-- <div class="absolute inset-0 bg-black opacity-20"></div> -->
         <header class="">
             <div class="cr flex justify-between items-center">
@@ -25,11 +25,11 @@
                 <button id="menu-open" class="font-bold text-[20px]! m-4" aria-label="Open menu">menu</button>
                 <nav>
                     <ul class="list-none flex gap-8">
-                        <li class="duration-200 font-bold"><a href="#" class="duration-200">HOME</a></li>
+                        <li class="duration-200 font-bold"><a href="#hero" class="duration-200">HOME</a></li>
                         <li class="duration-200 font-bold"><a href="#" class="duration-200">ABOUT</a></li>
-                        <li class="duration-200 font-bold"><a href="#" class="duration-200">PROJECTS</a></li>
-                        <li class="duration-200 font-bold"><a href="#" class="duration-200">SERVICES</a></li>
-                        <li class="duration-200 font-bold"><a href="#" class="duration-200">CONTACT</a></li>
+                        <li class="duration-200 font-bold"><a href="#PROJECT" class="duration-200">PROJECTS</a></li>
+                        <li class="duration-200 font-bold"><a href="#SERVICES" class="duration-200">SERVICES</a></li>
+                        <li class="duration-200 font-bold"><a href="#CONTACT" class="duration-200">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
@@ -384,7 +384,7 @@
     </section>
     <section class="mt-20 p-10 flex flex-col gap-9" data-aos="fade-up">
         <div class="flex justify-between cr flex-wrap gap-10">
-            <h2 class="text-6xl font-bold uppercase">Projects</h2>
+            <h2 class="text-6xl font-bold uppercase PROJECT">Projects</h2>
             <div class="max-w-[50%] md:max-w-90%">
                 <p class="max-w-[90%] font-bold">Through years of hands-on experience, we’ve built strong expertise in
                     digital projects, applying clear, efficient methods to deliver high-quality, reliable results at
@@ -393,25 +393,25 @@
         </div>
         <div class="images grid grid-cols-2 grid-rows-2 gap-4 cr" data-aos="zoom-in">
             <div class="overflow-hidden border relative image-1">
-                <img src="./for-images/image1.png" alt="" class="-z-1">
+                <img src="./src/for-images/image1.png" alt="" class="-z-1">
                 <div class="show"><a href="#" class="text-5xl font-bold link-in">Unleay</a></div>
                 <div class="branding flex justify-between"><span class="capitalize">branding</span><span
                         class="capitalize">unleay</span></div>
             </div>
             <div class="overflow-hidden border relative image-1">
-                <img src="./for-images/image2.png" alt="">
+                <img src="./src/for-images/image2.png" alt="">
                 <div class="show"><a href="#" class="text-5xl font-bold link-in">Natale</a></div>
                 <div class="branding flex justify-between"><span class="capitalize">branding</span><span
                         class="capitalize">natale</span></div>
             </div>
             <div class="relative overflow-hidden border image-1">
-                <img src="./for-images/image3.png" alt="">
+                <img src="./src/for-images/image3.png" alt="">
                 <div class="show"><a href="#" class="font-bold text-5xl link-in">Veauly</a></div>
                 <div class="flex justify-between branding"><span class="capitalize">branding</span><span
                         class="capitalize">veauly</span></div>
             </div>
             <div class="overflow-hidden relative border image-1">
-                <img src="./for-images/image4.png" alt="">
+                <img src="./src/for-images/image4.png" alt="">
                 <div class="show"><a href="#" class="text-4xl font-bold link-in">Motion Studio</a></div>
                 <div class="flex justify-between branding"><span class="capitalize">branding</span><span
                         class="capitalize">motion studio</span></div>
@@ -421,7 +421,7 @@
     <section class="cards mt-25">
         <div class="flex flex-col gap-9">
             <div class="flex justify-between cr flex-wrap gap-10">
-                <h2 class="text-6xl font-bold uppercase">services</h2>
+                <h2 class="text-6xl font-bold uppercase SERVICES">services</h2>
                 <div class="max-w-[50%] md:max-w-90%">
                     <p class="max-w-[90%] font-bold">Through years of hands-on experience, we’ve built strong
                         expertise
@@ -638,7 +638,7 @@
             <div class="flex gap-5">
                 <div class="card-1 p-12 z-20 flex flex-col gap-5 border box justify-center items-center">
                     <div class="overflow-hidden rounded-[20px] w-18 h-18">
-                        <img src="./for-images/team1.jpg" alt="" loading="lazy">
+                        <img src="./src/for-images/team1.jpg" alt="" loading="lazy">
                     </div>
                     <p class="font-bold text-center">"The team is efficient and reliable. They delivered everything they
                         promised. I will definitely hire them again for future projects."</p>
@@ -646,7 +646,7 @@
                 </div>
                 <div class="card-2 p-12 z-20 border box flex flex-col gap-5 justify-center items-center">
                     <div class="overflow-hidden rounded-[20px] w-18 h-18">
-                        <img src="./for-images/team2.jpg" alt="" loading="lazy">
+                        <img src="./src/for-images/team2.jpg" alt="" loading="lazy">
                     </div>
                     <p class="font-bold text-center">"The team is efficient and reliable. They delivered everything they
                         promised. I will definitely hire them again for future projects."</p>
@@ -654,7 +654,7 @@
                 </div>
                 <div class="card-3 p-12 z-20 border box flex flex-col gap-5 justify-center items-center">
                     <div class="overflow-hidden rounded-[20px] w-18 h-18">
-                        <img src="./for-images/team3.jpg" alt="" loading="lazy">
+                        <img src="./src/for-images/team3.jpg" alt="" loading="lazy">
                     </div>
                     <p class="font-bold text-center">"The team is efficient and reliable. They delivered everything they
                         promised. I will definitely hire them again for future projects."</p>
@@ -675,7 +675,7 @@
             </div>
             <div class="counter-card grid grid-cols-3 grid-rows-2 cr mt-40!">
                 <div class="border flex justify-center items-center"
-                    style="background-image: url(./for-images/imgi_40_69696db7c7d14895d39d5264_0fa65054d4c7ee761dd0840193b56181_herman-aasly-KQkwnE1XM1g-unsplash.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;">
+                    style="background-image: url(./src/for-images/imgi_40_69696db7c7d14895d39d5264_0fa65054d4c7ee761dd0840193b56181_herman-aasly-KQkwnE1XM1g-unsplash.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;">
                     <div class="icon-counter flex flex-col gap-2 p-15 pt-30 pb-30 justify-center items-center">
                         <div class="w-25 h-25 text-center">
                             <img src="https://cdn.prod.website-files.com/696959e4ed1e5a9d6799a34f/696bb304de90df35108904f5_873b2844beae0745a40f102e88979efa_Mark_Logo_White.png"
@@ -790,7 +790,7 @@
                 <div class="theTeam-1 relative w-[85%]" data-aos="fade-right">
                     <div class="relative forTeam border">
                         <div class="w-full h-full overflow-hidden team absolute duration-500">
-                            <img src="./for-images/theTeam3.avif" alt="">
+                            <img src="./src/for-images/theTeam3.avif" alt="">
                         </div>
                     </div>
                     <div class="absolute -bottom-7 left-0 uppercase">Felipe motive</div>
@@ -799,7 +799,7 @@
                 <div class="theTeam-2 row-start-2 col-start-2 relative ml-20 w-[85%]" data-aos="fade-left">
                     <div class="relative forTeam border">
                         <div class="w-full h-full overflow-hidden team absolute duration-500">
-                            <img src="./for-images/theTeam2.avif" alt="">
+                            <img src="./src/for-images/theTeam2.avif" alt="">
                         </div>
                     </div>
                     <div class="absolute -bottom-7 left-0 uppercase">Mar�a motive</div>
@@ -808,7 +808,7 @@
                 <div class="theTeam-3 row-start-3 col-start-1 relative w-[85%]" data-aos="fade-right">
                     <div class="relative forTeam border">
                         <div class="w-full h-full overflow-hidden team absolute duration-500">
-                            <img src="./for-images/theTeam1.avif" alt="">
+                            <img src="./src/for-images/theTeam1.avif" alt="">
                         </div>
                     </div>
                     <div class="absolute -bottom-7 left-0 uppercase">mara sanchez</div>
@@ -1143,7 +1143,7 @@
     <section>
         <div class="flex flex-col cr mt-40! gap-30">
             <div class="flex justify-between cr flex-wrap gap-10">
-                <h2 class="text-6xl font-bold font-sans uppercase">CONTACT US</h2>
+                <h2 class="text-6xl font-bold font-sans uppercase CONTACT">CONTACT US</h2>
                 <div class="w-[50%]">
                     <p class="w-[90%] font-bold">Through years of hands-on experience, we�ve built strong expertise in
                         digital projects, applying clear, efficient methods to deliver high-quality, reliable results at
@@ -1173,7 +1173,7 @@
                         </form>
                     </div>
                     <div class="contact-image w-[70%]">
-                        <img src="./for-images/contact.avif" alt="">
+                        <img src="./src/for-images/contact.avif" alt="">
                     </div>
                 </div>
             </div>
@@ -1210,14 +1210,14 @@
     <script>
         AOS.init();
     </script>
-    <script src="./main.js"></script>
+    <script src="./src/main.js"></script>
     <script>
         // Redirect unknown hash-based routes to 404
         (function () {
             var validHashes = ['', '#', '#hero', '#about', '#projects', '#services', '#contact'];
             var hash = window.location.hash;
             if (hash && validHashes.indexOf(hash) === -1) {
-                window.location.replace('./404.html?from=' + encodeURIComponent(window.location.href));
+                window.location.replace('./src/404.html?from=' + encodeURIComponent(window.location.href));
             }
         }());
     </script>
